@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Chapter {{chapterNum}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Book</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+  
+ 
+  
+  <img src="{{currentChapter.image}}">
+  <p style="white-space: pre-wrap;">{{currentChapter.text}}</p><br>
+  
+  <ion-button routerLink="/chapter/{{nextNum-2}}" *ngIf="chapterNum!=1">Chapter {{nextNum-2}}</ion-button>
+
+
+  <ion-button [routerLink]="['/table']">Table Of Contents</ion-button>
+
+  <ion-button routerLink="/chapter/{{nextNum}}" *ngIf="chapterNum!=5">Chapter {{nextNum}}</ion-button>
+
+    
+  </div>
+</ion-content>

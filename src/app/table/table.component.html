@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button [routerLink]="['/']">Back</ion-button>
+    <ion-title>
+      Table of Contents
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-button [routerLink]="['/']">Back</ion-button>
+      <ion-title size="large">Table of Contents</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Table of Contents</strong>
+    <ion-list>
+      <div *ngFor='let item of [].constructor(5); let i = index'>
+        <ion-item routerLink="/chapter/{{i+1}}">
+          <ion-label>Chapter {{i+1}}</ion-label>
+        </ion-item>
+      </div>
+      
+      
+    </ion-list>
+    
+  </div>
+</ion-content>
